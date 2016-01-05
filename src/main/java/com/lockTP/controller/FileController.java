@@ -40,7 +40,7 @@ public class FileController implements ServletContextAware{
   
         //将文件存入服务器
         String storePath = fileService.saveFile(multipartFile, path);
-        ModelAndView mv = new ModelAndView("redirect:/fileUpLoad.jsp");
+        ModelAndView mv = new ModelAndView("redirect:/fileUpLoadSuccess.jsp");
         mv.addObject("storePath", storePath);
         return mv;
 	}
