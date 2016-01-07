@@ -11,6 +11,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.servlet.ModelAndView;
 
 import com.lockTP.model.User;
 import com.lockTP.service.UserService;
@@ -64,5 +65,16 @@ public class UserController {
     	return new ResponseEntity<List<User>>(users, HttpStatus.OK);
     }
     
+    
+    /**
+     * 用于MockMVC基础测试
+     * 
+     */
+    @RequestMapping(value = "/testMockMVC", method = RequestMethod.GET)  
+    public ModelAndView mockMVCRequest(String para) throws Exception{  
+        ModelAndView mv = new ModelAndView("redirect:/fileUpLoadSuccess.jsp");
+        mv.addObject("para", para);
+        return mv;
+	}
 
 }

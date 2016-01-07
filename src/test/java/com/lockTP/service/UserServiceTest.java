@@ -2,21 +2,30 @@ package com.lockTP.service;
 
 import static org.junit.Assert.*;
 
-import java.awt.List;
 import java.net.UnknownHostException;
 import java.util.ArrayList;
 
 import org.junit.Ignore;
 import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.test.context.ContextConfiguration;
+import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import com.lockTP.model.User;
 
+
+//使用spring-junit来注入类进行测试
+@RunWith(SpringJUnit4ClassRunner.class)
+@ContextConfiguration(locations = "file:src/main/webapp/WEB-INF/applicationContext.xml")
 public class UserServiceTest {
+	
+	@Autowired
+	UserService userService;
 
 	@Ignore
 	@Test
 	public void testSave() {
-		UserService userService = new UserService();
 		User user = new User();
 		user.setId("1");
 		user.setName("lockTP");
@@ -32,7 +41,6 @@ public class UserServiceTest {
 	
 	@Test
 	public void testFindAll() {
-		UserService userService = new UserService();
 		try {
 			ArrayList<User> users = (ArrayList<User>) userService.findAll();
 			for(int i = 0; i < users.size(); i++){
