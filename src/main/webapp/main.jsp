@@ -93,8 +93,7 @@
 							<img src="images/myPic/Legendary_lunch.jpg" alt="">
 						</div>
 						<div class="col-md-8 welcome-right">
-							<h4>这个图片的初衷来源于暗黑破坏神</h4>
-							<p>吃午饭的时候，边玩边吃，之后突然觉得做一个这样的图片会很酷，于是花了一点世界完成了这个图片。</p>
+							<h4>这个来源于暗黑破坏神</h4>
 						</div>
 						<div class="clearfix"> </div>
 					</div>			
@@ -103,12 +102,12 @@
 						<div class="col-md-6 feature-right">
 							<h3>扩充列表</h3>
 							<ul class="menu">
-								<li class="item1"><a href="#">column1 <span class="icon"> </span></a>
+								<li class="item1"><a href="#">行1 <span class="icon"> </span></a>
 									<ul>
 										<li class="subitem1"><a href="#">aaaaaaaaaaaaaaaaaaaaaaa</a></li>										
 									</ul>
 								</li>
-								<li class="item2"><a href="#">column2 <span class="icon"> </span></a>
+								<li class="item2"><a href="#">行2 <span class="icon"> </span></a>
 									<ul>
 										<li class="subitem1"><a href="#">bbbbbbbbbbbbbbbbbbbb</a></li>
 									</ul>
