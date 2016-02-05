@@ -49,6 +49,7 @@
  							<li><a href="backend.jsp">后台测试</a></li>
 							<li><a href="mongoDB.jsp">mongoDB测试</a></li>
 							<li><a href="fileUpLoad.jsp">文件上传测试</a></li>
+							<li><a href="print.jsp">pdf测试</a></li>
 <!--							<li><a href="gallery.html">Gallery</a></li>
 							<li><a href="testmonials.html">Testmonials</a></li>
 							<li><a href="contact.html">Contact</a></li> -->

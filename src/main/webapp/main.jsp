@@ -48,6 +48,7 @@
  							<li><a href="backend.jsp">后台测试</a></li>
 							<li><a href="mongoDB.jsp">mongoDB测试</a></li>
 							<li><a href="fileUpLoad.jsp">文件上传测试</a></li>
+							<li><a href="print.jsp">pdf测试</a></li>
 <!--							<li><a href="gallery.html">Gallery</a></li>
 							<li><a href="testmonials.html">Testmonials</a></li>
 							<li><a href="contact.html">Contact</a></li> -->
@@ -102,14 +103,19 @@
 						<div class="col-md-6 feature-right">
 							<h3>扩充列表</h3>
 							<ul class="menu">
-								<li class="item1"><a href="#">行1 <span class="icon"> </span></a>
+								<li class="item1"><a href="#">爱心<span class="icon"> </span></a>
 									<ul>
-										<li class="subitem1"><a href="#">aaaaaaaaaaaaaaaaaaaaaaa</a></li>										
+										<li class="subitem1"><a href="love.html">love</a></li>										
 									</ul>
 								</li>
-								<li class="item2"><a href="#">行2 <span class="icon"> </span></a>
+								<li class="item2"><a href="#">气泡<span class="icon"> </span></a>
 									<ul>
-										<li class="subitem1"><a href="#">bbbbbbbbbbbbbbbbbbbb</a></li>
+										<li class="subitem1"><a href="bubble.html">bubble</a></li>
+									</ul>
+								</li>
+								<li class="item2"><a href="#">字体<span class="icon"> </span></a>
+									<ul>
+										<li class="subitem1"><a href="wordblow.html">wordblow</a></li>
 									</ul>
 								</li>
 							</ul>
