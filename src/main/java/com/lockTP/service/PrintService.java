@@ -15,6 +15,7 @@ import com.itextpdf.text.Document;
 import com.itextpdf.text.DocumentException;
 import com.itextpdf.text.Element;
 import com.itextpdf.text.Font;
+import com.itextpdf.text.Image;
 import com.itextpdf.text.PageSize;
 import com.itextpdf.text.Paragraph;
 import com.itextpdf.text.Rectangle;
@@ -90,6 +91,17 @@ public class PrintService {
 		mainTable.addCell(dateCell);
 		
 		document.add(mainTable);
+		
+		//添加背景图片
+		String imagefile =  PrintService.class.getResource("/").getFile() + "image"
+				+ File.separator + "backimage.jpg";
+		File iamge = new File(imagefile);
+		Image tImgCover = Image.getInstance(iamge.getCanonicalPath());   
+        /* 设置图片的位置 */  
+        tImgCover.setAbsolutePosition(0, 0);  
+        /* 设置图片的大小 */  
+        tImgCover.scaleAbsolute(595, 842);  
+        document.add(tImgCover);             //加载图片 
 		
 		document.close();
 		
