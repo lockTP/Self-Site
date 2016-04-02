@@ -18,6 +18,13 @@
 			<version>3.1.0</version>
 		</dependency>
 
+  				
+		<!-- itextPDF打印 -->
+		<dependency>
+		  <groupId>com.itextpdf</groupId>
+		  <artifactId>itextpdf</artifactId>
+		  <version>5.5.8</version>
+		</dependency>
   	
         <dependency>  
             <groupId>junit</groupId>  
@@ -209,13 +216,7 @@
 			<version>1.9.5</version>
 			<scope>test</scope>
 		</dependency>
-		
-		<!-- itextPDF打印 -->
-		<dependency>
-		  <groupId>com.itextpdf</groupId>
-		  <artifactId>itextpdf</artifactId>
-		  <version>5.5.8</version>
-		</dependency>
+
     </dependencies>
   
 	<build>

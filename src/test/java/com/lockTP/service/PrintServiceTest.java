@@ -26,5 +26,11 @@ public class PrintServiceTest {
 		printService.printByInput("aa", "contentcontentcontent", "bb", os);
 		assertEquals(1, 1);
 	}
+	
+	@Test
+	public void testPrintQuestion() throws DocumentException, IOException {
+		printService.createQuestion();
+		assertEquals(1, 1);
+	}
 
 }
