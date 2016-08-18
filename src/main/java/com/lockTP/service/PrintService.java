@@ -2,8 +2,6 @@ package com.lockTP.service;
 
 
 import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.OutputStream;
 import java.text.SimpleDateFormat;
@@ -106,5 +104,58 @@ public class PrintService {
 		document.close();
 		
 		return "print success";
+	}
+	
+	public String printPaperOne(OutputStream os) throws DocumentException{
+		Rectangle rectPageSize = new Rectangle(PageSize.A4);
+		document = new Document(rectPageSize, 50, 50, 50, 50);
+		document.addTitle("letter");
+		pdfWriter = PdfWriter.getInstance(document, os);
+		document.open();
+		
+	    PdfPTable table = new PdfPTable(1);
+	    table.addCell(createQuestion());
+	    document.add(table);
+		
+		document.close();
+		
+		return "print success";
+		
+	}
+	
+	public String printPaperTwo(OutputStream os) throws DocumentException{
+		Rectangle rectPageSize = new Rectangle(PageSize.A4);
+		document = new Document(rectPageSize, 50, 50, 50, 50);
+		document.addTitle("letter");
+		pdfWriter = PdfWriter.getInstance(document, os);
+		document.open();
+		
+	    PdfPTable table = new PdfPTable(3);
+	    PdfPCell title = new PdfPCell(new Paragraph("Calculate these questions"));
+	    title.setColspan(3);
+	    title.setHorizontalAlignment(Element.ALIGN_CENTER);
+	    table.addCell(title);
+	    for (int i = 0; i < 90; i++) {
+	    	 table.addCell(createQuestion());
+		}
+	    document.add(table);
+		
+		document.close();
+		
+		return "print success";
+		
+	}
+	
+	//生成一道题
+	public PdfPCell createQuestion(){
+		int randomNum = (int) (Math.random()*100);
+		int randomNum2 = (int) (Math.random()*100);
+		String[] operator = new String[]{"+","-","x"};
+		int randomInt = (int)(Math.random()*3);
+		String randomOpe = operator[randomInt];
+		String equation = String.valueOf(randomNum) + randomOpe + String.valueOf(String.valueOf(randomNum2)) + "="; 
+		PdfPCell cell = new PdfPCell(new Paragraph(equation));
+		return cell;
+		
 	}
 }
